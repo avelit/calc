@@ -5,12 +5,20 @@ public abstract class Number {
     public NumberType numberType;
     public String stringNumber;
     
-    public int convertToArabian(){
-        return 0;
-    };
+    public Number(String stringNumber){
+        this.stringNumber = stringNumber;
+    }
     
-    public Number convertFromArabian(){
-        return null;
-    };
+    public Number(){
+    }
+    
+    public int convertToArabian() {
+        return new Integer(stringNumber);
+    }
+
+    public Number convertFromArabian() {
+        NumberArabian number  = new NumberArabian(stringNumber);
+        return number;
+    }
     
 }
