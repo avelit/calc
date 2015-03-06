@@ -10,12 +10,7 @@ public class NumberBinary extends Number {
     @Override
     public int convertToArabian() {
         
-        int result = 0;
-        final int length = stringNumber.length();
-        for (int i = 0 ; i < length ; i++) {
-            result+=Character.getNumericValue(stringNumber.charAt(length - i - 1)) * Math.pow(2, i);
-        }
-        return result;
+        return Integer.parseInt(stringNumber, 2);
     }
 
      @Override
